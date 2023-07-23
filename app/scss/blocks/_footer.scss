@@ -1,0 +1,39 @@
+.footer {
+    background: #3D4050;
+    padding: 30px 0;
+    &__info {
+        p {
+            margin: 0;
+            color: var(--white);
+        }
+        display: flex;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > div {
+            flex: 1 0 31%;
+            justify-content: center;
+            position: relative;
+            &:nth-child(2) {
+                flex: 1 0 38%;
+            }
+            &::after {
+                content: '';
+                height: 18px;
+                width: 1px;
+                display: block;
+                background-color: #C3C3C3;
+                position: absolute;
+                right: 0;
+            }
+            &:nth-last-child(1) {
+                &::after {
+                    margin-left: 0;
+                    content: none;
+                }
+            }
+        }
+    }
+}

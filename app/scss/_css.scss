@@ -1,0 +1,91 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --blue: #3E9CDC;
+    --dark-blue: #43ABF0;
+    --border-blue: #286690;
+    --border-radius-default: 4px;
+    --transition-default: .4s;
+
+    --margin30: 30px;
+    --margin80: 80px;
+}
+body {
+    font-family: 'Lato';
+    font-size: 13px;
+}
+main {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+ul {
+    margin: 0;
+}
+.blue-color {
+    color: var(--blue);
+}
+.ttu {
+    text-transform: uppercase;
+}
+
+.h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.h2 {
+    font-size: 36px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.h1,.h2 {
+    margin: 0;
+    span {
+        transition: var(--transition-default) color;
+    }
+    &:hover {
+        span {
+            color: var(--dark-blue);
+        }
+    }
+}
+a {
+    text-decoration: none;
+    color: var(--white);
+    transition: var(--transition-default) color;
+    &:hover {
+        color: var(--dark-blue);
+    }
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  @media(min-width: 576px){
+    .container{
+      max-width: 540px;
+      padding: 0;
+    }
+  }
+  @media(min-width: 768px){
+    .container{
+      max-width: 720px;
+    }
+  }
+  @media(min-width: 992px){
+    .container{
+      max-width: 960px;
+    }
+  }
+  @media(min-width: 1200px){
+    .container{
+      max-width: 1140px;
+    }
+  }
+  @media(min-width: 1400px){
+    .container {
+      max-width: 1170px;
+    }
+  }

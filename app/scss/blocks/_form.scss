@@ -1,0 +1,113 @@
+input {
+    width: 100%;
+    &::placeholder {
+        color: #272733;
+    }
+    &[type="text"]{
+        padding: 12px 35px 12px 10px;
+        border: 1px solid var(--white);
+        border-radius: var(--border-radius-default);
+        color: #272733;
+        font-size: 18px;
+        background: rgba(255, 255, 255, 0.85);
+        min-height: 48px;
+        transition: var(--transition-default);
+        &:focus-visible {
+            border-color: var(--blue);
+            outline: none;
+        }
+        &:focus {
+            background-color: var(--white);
+        }
+    }
+    &[type="range"] {
+        background: transparent;
+    }
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+.form {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -30px;
+    }
+    &__item {
+        margin-right: 30px;
+        margin-bottom: 30px;
+        &_md {
+            flex: 0 0 calc( 33.3333% - 30px );
+        }
+        &_xl {
+            flex: 0 0 calc( 66.6666% - 30px );
+        }
+    }
+    &__submit {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.scrollbar {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        span {
+            font-size: 18px;
+            color: var(--white);
+        }
+        #scrollbar__value {
+            font-weight: 600;
+        }
+    }
+}
+.file {
+    position: relative;
+    &__input {
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+    }
+    label {
+        min-height: 48px;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        border: 2px solid var(--blue);
+        border-radius: var(--border-radius-default);
+        transition: var(--transition-default);
+        cursor: pointer;
+        &:hover {
+            background: rgba(255, 255, 255, 0.85);
+        }
+        svg {
+            fill: #272733;
+            width: 20px;
+            height: 20px;
+            flex: 0 0 20px;
+            transition: var(--transition-default);
+            margin-right: 10px;
+        }
+        span {
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #272733;
+            transition: var(--transition-default);
+        }
+        &.valid {
+            svg {
+                fill: var(--blue);
+            }
+            span {
+                color: var(--blue);
+            }
+        }
+    }
+}

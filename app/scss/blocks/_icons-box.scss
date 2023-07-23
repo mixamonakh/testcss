@@ -1,0 +1,39 @@
+.icons-box {
+    display: flex;
+    align-items: center;
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-right: 38px;
+        &:hover {
+            span {
+                color: var(--dark-blue);
+            }
+            svg {
+                fill: var(--white);
+            }
+        }
+        &:nth-last-child(1){
+            margin-right: 0;
+        }
+        span {
+            transition: var(--transition-default);
+        }
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--blue);
+            transition: var(--transition-default);
+            margin-right: 10px;
+        }
+    }
+
+    &_connection {
+
+    }
+    &_pay {
+        span {
+            color: #C3C3C3;
+        }
+    }
+}

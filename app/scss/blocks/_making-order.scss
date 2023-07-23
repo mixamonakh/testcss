@@ -1,0 +1,20 @@
+.making-order {
+    padding: 150px 0;
+    background-color: #272733;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: url('../image/caption-order-bg.png');
+    &__header {
+        margin-bottom: var(--margin80);
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 30px;
+        color: var(--white);
+    }
+    &__subtitle {
+        color: #BBB;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,38 @@
+
+
+.button {
+    border-radius: var(--border-radius-default);
+    background-color: var(--blue);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    border: 1px solid var(--white);
+    transition: var(--transition-default);
+    &:hover {
+        background-color: #fff;
+        border-color: var(--dark-blue);
+    }
+    &_white {
+        background-color: var(--white);
+        border-color: #6F6D7B;
+        color: #2A2B30;
+        &:hover {
+            background-color: var(--blue);
+            border-color: var(--blue);
+            color: var(--white);
+        }
+    }
+    &_submit {
+        color: var(--white);
+        min-width: 370px;
+        cursor: pointer;
+        &:hover {
+            background-color: transparent;
+            color: var(--dark-blue);
+        }
+    }
+}

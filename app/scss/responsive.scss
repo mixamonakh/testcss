@@ -1,0 +1,302 @@
+@media(max-width: 1400px){
+    :root {
+        --margin80: 50px;
+    }
+    .banner {
+        &__content {
+            top: 150px;
+        }
+    }
+}
+@media(max-width: 1200px){
+    .h1 {
+        font-size: 36px;
+    }
+    .h2 {
+        font-size: 30px;
+    }
+    .banner {
+        &__title {
+            margin-bottom: 20px;
+        }
+        &__text-box {
+            margin-bottom: 20px;
+        }
+    }
+    .icons-box {
+        &__item {
+            margin-right: 7px;
+        }
+    }
+    .footer__wrapper > div:nth-child(2) {
+        flex: 1 0 34%;
+    }
+    .header {
+        padding: 15px 0;
+    }
+    .making-order {
+        padding: 100px 0;
+    }
+}
+@media(max-width: 992px){
+    .menu {
+        ul {
+            li {
+                margin-right: 15px;
+            }
+        }
+    }
+    .triggers {
+        &__name {
+            font-size: 14px;
+        }
+        &__item {
+            &::after {
+                top: 37px;
+            }
+        }
+        &__icon {
+            width: 75px;
+            height: 75px;
+            svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+    .banner {
+        &__content {
+            position: relative;
+            z-index: 2;
+            top: inherit;
+            padding: 150px 0 100px 0;
+        }
+        &__img {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            picture {
+                height: 100%;
+                img {
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__title {
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
+        &__text-box {
+            span, li {
+                font-size: 15px;
+            }
+        }
+        &__buttons-box {
+            display: inline-flex;
+            flex-direction: column;
+            .button:nth-child(1){
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .form {
+        &__item {
+            &_md {
+                flex: 0 0 calc(50% - 30px);
+            }
+            &_xl {
+                flex: 0 0 calc(50% - 30px);
+            }
+        }
+    }
+    .scrollbar {
+        &__content {
+            span {
+                font-size: 15px;
+            }
+        }
+    }
+    .footer {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__info {
+            order: 3;
+            flex: 1 0 100% !important;
+            margin-top: 20px;
+            &::after {
+                content: none !important;
+            }
+        }
+    }
+}
+@media(max-width: 767px){
+    main {
+        overflow: hidden;
+    }
+    .h1 {
+        font-size: 25px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .h2 {
+        font-size: 23px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+    :root {
+        --margin30: 20px;
+        --margin80: 40px;
+    }
+    .header {
+        padding: 10px 0;
+        height: 58px;
+        &__logo, &__menu {
+            flex: 1;
+        }
+        &__menu {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    .menu {
+        position: absolute;
+        left: -500px;
+        top: 58px;
+        background: rgba(16, 16, 29, 0.9);
+        padding: 20px;
+        width: 50%;
+        height: 100vh;
+        transition: var(--transition-default);
+        overflow-y: auto;
+        &.active {
+            left: 0;
+        }
+        ul {
+            flex-direction: column;
+            align-items: flex-start;
+            li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+        &-btn {
+            display: flex;
+        }
+    }
+
+    .banner {
+        &__text-box {
+            span, li {
+                font-size: 12px;
+            }
+        }
+    }
+    
+    .triggers {
+        flex-wrap: wrap;
+        margin-right: -20px;
+        justify-content: center;
+        margin-bottom: 30px;
+        &__item {
+            margin-right: 20px;
+            flex: 0 0 calc( 33.3333% - 20px);
+            margin-bottom: 20px;
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    .making-order {
+        padding: 75px 0;
+        &__title {
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            font-size: 13px;
+        }
+    }
+
+    .form {
+        &__wrapper {
+            margin-right: 0;
+            flex-direction: column;
+        }
+        &__item {
+            flex: 1;
+            margin-right: 0;
+        }
+    }
+    .footer {
+        &__wrapper {
+            flex-direction: column;
+            & > div {
+                flex: 1 0 100%;
+                margin-top: 0;
+                margin-bottom: 20px;
+                &:nth-child(1){
+                    margin-bottom: 0;
+                }
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+@media(max-width: 576px){
+    .header {
+        &__logo {
+            padding-right: 0;
+        }
+    }
+    .banner {
+        &__content {
+            padding: 100px 0 75px ;
+        }
+    }
+    .triggers {
+        &__icon {
+            width: 60px;
+            height: 60px;
+        }
+        &__item {
+            flex: 0 0 calc( 50% - 20px);
+            margin-bottom: 20px;
+        }
+    }
+    .scrollbar {
+        &__content {
+            span {
+                // font-size: 12px;
+            }
+        }
+        #scrollbar__value {
+            flex: 0 0 15%;
+            text-align: right;
+        }
+    }
+
+    .button {
+        &_submit {
+            min-width: 100%;
+        }
+    }
+
+    .form {
+        &__submit {
+            margin-top: 0;
+        }
+    }
+    .select2-container--open .select2-dropdown--below, .select2-container--open .select2-dropdown--above {
+        margin-left: 10px;
+    }
+    .select2-container.select2-container--default.select2-container--open {
+        left: 0 !important;
+    } 
+}

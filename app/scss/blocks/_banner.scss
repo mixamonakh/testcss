@@ -1,0 +1,48 @@
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__img {
+        width: 100%;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+    &__content {
+        position: absolute;
+        width: 100%;
+    }
+    &__title {
+        padding-right: 30%;
+        margin: 0;
+        margin-bottom: var(--margin80);
+    }
+    &__text-box {
+        margin-bottom: var(--margin80);
+        span {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+            font-size: 20px;
+            &:nth-last-child(1) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__buttons-box {
+        .button {
+            min-width: 183px;
+            &:nth-child(1) {
+                margin-right: 30px;
+            }
+        }
+    }
+}
