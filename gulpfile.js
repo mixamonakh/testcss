@@ -44,7 +44,7 @@ gulp.task('libs', function(){
 // следим за изменениями html
 gulp.task('code', function(){
     return gulp.src('app/*.html')
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({stream: true})) // Обновляем HTML на странице при изменении
 });
 
 // компилируем sass/scss в css
@@ -62,7 +62,7 @@ gulp.task('css-nano', function(){
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(cssnano())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('app/css/min-css'));
+        .pipe(gulp.dest('app/css'));
 });
 
 // gulp buid
@@ -87,7 +87,7 @@ gulp.task('img', function(){
 // переносим файлы в buld
 gulp.task('prebuild', async function(){
     const buildCss = gulp.src([
-        'app/css/min-css/**/*'
+        'app/css/**/*.min.css'
     ])
     .pipe(gulp.dest('dist/css'))
 
